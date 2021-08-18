@@ -1,0 +1,192 @@
+.feedback {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1230px;
+  margin: 139px auto 0;
+  padding: 70px 30px;
+  background-image: url("../img/form-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 844px 455px;
+  background-position-x: 30px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 auto;
+    padding: 0;
+    background-image: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 110px auto 0;
+    padding: 70px 30px 74px;
+    background-image: url("../img/form-tablet.jpg");
+    background-size: 100%;
+    background-position-x: 0;
+  }
+}
+
+.feedback__wrapper {
+  width: 656px;
+  padding: 50px;
+  text-align: center;
+  background-color: $basic__white;
+  box-shadow: 0 4px 30px transparentize($special__dark, 0.9);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px 16px;
+    background-color: $basic__light-three;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 658px;
+    margin: 0 auto;
+    padding: 51px 50px 51px;
+  }
+}
+
+.feedback__title {
+  margin: 0 0 11px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $basic__darkest;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 0 13px;
+  }
+}
+
+.feedback__description {
+  margin: 0 0 24px;
+  padding: 0;
+  line-height: 24px;
+  color: $basic__darkest;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.feedback__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__form-container {
+  position: relative;
+}
+
+.feedback__label {
+  display: none;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic__accent-main;
+}
+
+.feedback__input {
+  width: 269px;
+  height: 49px;
+  padding: 0 15px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic__darkest;
+  border: 1px solid transparentize($basic__dark, 0.7);
+  box-sizing: border-box;
+
+  &:invalid {
+    position: relative;
+    border-color: $basic__accent-main;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 288px;
+  }
+}
+
+.feedback__input--phone {
+  position: relative;
+
+  &::placeholder {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    padding-top: 7px;
+    padding-left: 10px;
+    background-image: url(../img/icons/asterisk.svg);
+    background-repeat: no-repeat;
+    background-size: 7px 7px;
+  }
+}
+
+.feedback__input:invalid + .feedback__label {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.feedback__button {
+  width: 176px;
+  padding: 19px 0 15px 3px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic__white;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  border: none;
+  background-color: $basic__accent-main;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $basic__accent-hover;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 288px;
+    padding: 19px 0 18px 3px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 250px;
+    padding: 19px 0 18px 3px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

@@ -1,0 +1,20 @@
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 160px 41px 80px 30px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    flex-direction: column;
+    justify-content: left;
+    padding: 61px 16px 54px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 21px 54px;
+  }
+}

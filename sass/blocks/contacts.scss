@@ -1,0 +1,99 @@
+.contacts {
+  padding: 0 25px 0 15px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    padding: 30px 0 23px;
+    border-right: none;
+    border-top: 1px solid $basic__light-four;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-right: 22px;
+    padding: 1px 0 0 49px;
+    border: none;
+    box-sizing: border-box;
+  }
+}
+
+.contacts__title {
+  margin: 0 0 23px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $basic__darkest;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 0 24px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+}
+
+.contacts__link--email {
+  margin-bottom: 17px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 16px 10px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__link--phone {
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin-left: -2px;
+  }
+}
+
+.contacts__description--email {
+  margin: 2px 0 0 15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic__accent-main;
+  text-decoration-line: underline;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 4px 0 0 15px;
+    text-decoration-line: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    text-decoration-line: none;
+  }
+}
+
+.contacts__description--phone {
+  margin: 6px 0 0 11px;
+  line-height: 32px;
+  color: $basic__accent-main;
+  text-decoration-line: underline;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 8px 0 0 11px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 8px 0 0 11px;
+  }
+}

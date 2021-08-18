@@ -1,0 +1,91 @@
+.main-nav__wrapper {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: $basic__white;
+  }
+}
+
+.main-nav__logo {
+  margin: 0;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 44px;
+    height: 17px;
+    margin: 17px 0 0 16px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 44px;
+    height: 17px;
+    margin: 17px 0 0 21px;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: block;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.main-nav__toggle--closed {
+  @media (min-width: $mobile-width) {
+    width: 50px;
+    height: 50px;
+    background-color: $basic__accent-main;
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 72px;
+  }
+}
+
+.main-nav__toggle--opened {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    background: url("../../img/icons/cross.svg") no-repeat;
+    border: none;
+    z-index: 15;
+
+    & .main-nav__toggle-button {
+      display: none;
+    }
+  }
+}
+
+.main-nav__toggle--nojs {
+  display: none;
+}
+
+.main-nav__toggle-button {
+  position: relative;
+  display: block;
+  margin: -2px auto 0;
+  width: 22px;
+  height: 13px;
+  border-top: 1px solid $basic__light-two;
+  border-bottom: 1px solid $basic__light-two;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $basic__light-two;
+  }
+}

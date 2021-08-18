@@ -1,0 +1,200 @@
+.promo {
+  min-height: 860px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $basic__darkest-two;
+  background-image: url("../img/promo-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-desktop@2x.jpg");
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    min-height: 453px;
+    background-color: transparent;
+    background-image:
+      url("../img/promo-mobile.jpg"),
+      linear-gradient($basic__darkest-two, $basic__darkest-two 235px);
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/promo-mobile@2x.jpg"),
+        linear-gradient($basic__darkest-two, $basic__darkest-two 235px);
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    min-height: 344px;
+    background-color: $basic__darkest-two;
+    background-image: url("../img/promo-tablet.jpg");
+    box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet@2x.jpg");
+      box-sizing: border-box;
+    }
+  }
+}
+
+.promo__container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 186px 0 185px;
+  box-sizing: border-box;
+  z-index: 1;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    padding: 81px 0 80px;
+    text-align: center;
+    background-image: linear-gradient(transparent 235px, $basic__white 235px);
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 398px;
+    padding: 60px 0 83px;
+    background: transparent;
+  }
+}
+
+.promo__wrapper {
+  width: 470px;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: 100%;
+  }
+}
+
+.promo__title {
+  width: 412px;
+  margin: 0 0 30px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.11px;
+  color: $basic__white;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    margin: 0 0 102px 5px;
+    padding: 0 16px;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  @media (min-width: 350px) and (max-width: $mobile-max-width) {
+    margin: 0 0 138px 5px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: auto;
+    margin: 0 0 15px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+.promo__description {
+  width: 376px;
+  margin: 0 0 32px;
+  padding: 0;
+  line-height: 27px;
+  letter-spacing: -0.47px;
+  color: $basic__white;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    margin: 0 0 20px;
+    padding: 0 16px;
+    color: $basic__dark;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 398px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+    color: $basic__white;
+  }
+}
+
+.promo__button {
+  position: relative;
+  display: block;
+  width: 340px;
+  min-height: 75px;
+  padding: 30px 74px 30px 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $basic__white;
+  background-color: $basic__accent-main;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 31px;
+    right: 40px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icons/arrow-bottom.svg") no-repeat;
+  }
+
+  &:hover {
+    background-color: $basic__accent-hover;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 288px;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 20px 74px 18px 40px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 2.69px;
+
+    &::after {
+      top: 17px;
+      right: 39px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 250px;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 20px 74px 18px 40px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 2.69px;
+
+    &::after {
+      top: 17px;
+      right: 39px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

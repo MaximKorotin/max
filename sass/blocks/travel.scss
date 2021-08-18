@@ -1,0 +1,113 @@
+.travel {
+  padding-right: 3px;
+  border-right: 1px solid $basic__light-four;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 0;
+    text-align: center;
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 1px 20px 0 0;
+  }
+}
+
+.travel__title {
+  margin: 0 0 15px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $basic__darkest;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+}
+
+.travel__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+}
+
+.travel__item {
+  min-width: 130px;
+
+  &:nth-child(2) {
+    min-width: 124px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    min-width: 134px;
+
+    &:nth-child(2) {
+      min-width: 134px;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    min-width: 125px;
+
+    &:nth-child(2) {
+      min-width: 125px;
+    }
+  }
+}
+
+.travel__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+}
+
+.travel__city {
+  height: 18px;
+  margin: 0 0 9px;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+}
+
+.travel__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic__darkest;
+  opacity: 0.5;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  }
+
+}

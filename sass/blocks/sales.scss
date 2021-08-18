@@ -1,0 +1,349 @@
+.sales {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 124px 30px 151px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    margin: 0 auto;
+    padding: 40px 0 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: auto;
+    margin: 0 auto;
+    padding: 95px 0 0;
+  }
+}
+
+.sales__tabs {
+  width: 900px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid transparentize($basic__dark, 0.7);
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 100%;
+    margin: 0 0 24px 16px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 100%;
+    margin: 0 0 30px 21px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+}
+
+.tabs__list {
+  display: flex;
+  column-gap: 99px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs__button {
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  color: $basic__dark;
+  opacity: 0.3;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--current {
+    color: $basic__accent-main;
+    opacity: 1;
+  }
+}
+
+.sales__list {
+  position: relative;
+  max-width: 1170px;
+  min-height: 569px;
+  margin: 74px 0 0;
+  padding: 0;
+  list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -137px;
+    width: 1444px;
+    height: 1089px;
+    background: url(../../img/tab-map.png) no-repeat;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: auto;
+    margin: 0 auto;
+    min-height: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 1444px) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sales__item {
+  position: relative;
+  display: none;
+  z-index: 10;
+
+  &--current {
+    display: block;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    padding: 0;
+  }
+}
+
+.sale__title {
+  position: relative;
+  width: 425px;
+  margin: 0 0 31px;
+  padding: 0 0 17px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: #fe7865;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    margin: 0 auto 20px;
+    padding: 0 16px;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: auto;
+    margin: 0 auto 20px;
+    padding: 0 21px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sale__description {
+  width: 370px;
+  margin: 0 0 49px;
+  padding: 0;
+  letter-spacing: -0.47px;
+  opacity: 0.7;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    margin: 0 auto 17px;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: auto;
+    margin: 0 auto 19px;
+    padding: 0 21px;
+    text-align: center;
+  }
+}
+
+.sale__button {
+  display: block;
+  width: 250px;
+  margin: 0;
+  padding: 30px 0 29px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic__white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $basic__accent-main;
+
+  &:hover {
+    background-color: $basic__accent-hover;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 288px;
+    margin: 0 auto 51px;
+    padding: 20px 0 18px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 auto 30px;
+    padding: 20px 0 18px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.sales__wrapper {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+  }
+}
+
+.sale__images {
+  position: absolute;
+  top: -10px;
+  left: 470px;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+  }
+}
+
+.reviews {
+  position: absolute;
+  top: 104px;
+  right: 0;
+  width: 382px;
+  margin: 0;
+  padding: 30px;
+  background-color: $basic__white;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 268px;
+    height: max-content;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 31px 20px 34px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: max-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+.reviews__title {
+  position: relative;
+  margin: 0 0 21px;
+  padding: 0 0 13px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.69px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 1px;
+    background-color: #fe7865;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+
+    &::after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 68px;
+      height: 1px;
+      margin: 0 auto;
+      background-color: #fe7865;
+    }
+  }
+}
+
+.reviews__description {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 14px;
+  letter-spacing: -0.41px;
+  opacity: 0.7;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 16px;
+  }
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
+.reviewer__picture {
+  width: 38px;
+  height: 38px;
+}
+
+.reviewer__name {
+  margin: 1px 0 0 16px;
+  padding: 0;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.47px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 1px 0 0 9px;
+  }
+}

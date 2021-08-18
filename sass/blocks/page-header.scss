@@ -1,0 +1,7 @@
+.page-header {
+  padding: 36px 0 26px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0;
+  }
+}

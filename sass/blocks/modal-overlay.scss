@@ -1,0 +1,16 @@
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $basic__black;
+  opacity: 0.8;
+  z-index: 50;
+
+  &--open {
+    display: block;
+
+  }
+}

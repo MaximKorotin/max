@@ -1,0 +1,168 @@
+.modal-buy {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 728px;
+  height: 444px;
+  margin: auto;
+  background-color: $basic__light-three;
+  background-image: url(../img/modal-buy.jpg);
+  background-repeat: no-repeat;
+  background-size: 338px 444px;
+  background-position-x: 0;
+  box-sizing: border-box;
+  z-index: 100;
+
+  &--open {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    height: 568px;
+    padding: 100px 16px 185px;
+    background-image: none;
+
+    &--open {
+      display: block;
+    }
+  }
+}
+
+.modal-buy__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  padding: 72px 61px 89px 59px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.modal-buy__title {
+  margin: 0 0 50px;
+  padding: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  color: $basic__darkest-two;
+}
+
+.modal-buy__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-buy__container {
+  margin-bottom: 20px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.modal-buy__list {
+  position: relative;
+}
+
+.modal-buy__label {
+  display: none;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic__accent-main;
+}
+
+.modal-buy__input {
+  width: 270px;
+  height: 50px;
+  padding: 0 15px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic__darkest-two;
+  border: 1px solid $basic__light-four;
+  box-sizing: border-box;
+
+  &:invalid {
+    position: relative;
+    border-color: $basic__accent-main;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.modal-buy__input:invalid + .modal-buy__label {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.modal-buy__input--phone {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    padding-top: 7px;
+    padding-left: 10px;
+    background-image: url(../img/icons/asterisk.svg);
+    background-repeat: no-repeat;
+    background-size: 7px 7px;
+  }
+}
+
+.modal-buy__form-button {
+  width: 176px;
+  height: 50px;
+  background-color: $basic__accent-main;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic__white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background-color: #f17d4b;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 288px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.modal-buy__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background-color: $basic__light-three;
+  background-image: url(../../img/icons/cross.svg);
+  border: 0;
+  cursor: pointer;
+  z-index: 15;
+}

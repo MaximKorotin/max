@@ -1,0 +1,17 @@
+.main-nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 3px 16px 4px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    width: 100%;
+    padding: 0;
+
+    &--nojs {
+      flex-direction: column;
+    }
+  }
+}
